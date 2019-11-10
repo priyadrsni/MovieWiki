@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  color: #000;
+}
+
+.bgimage {
+  background: #fdbd3f;
+  /* url("../images/blue.jpg") center/cover; */
+  height: 100vh;
+}
+
+#homepage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.child {
+  margin: 1rem 0;
+}
+
+.title {
+  font-size: 3rem;
+  color: #000;
+  /* #db6c0b; */
+}
+
+.search-bar {
+  padding: 5px;
+  margin-right: 1px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+button {
+  padding: 5px;
+  border: none;
+  background-color: #000;
+  /* #db6c0b; */
+  color: #fff;
+  border-radius: 2px;
+  width: 70px;
+  cursor: pointer;
+  outline: none;
+}
+
+.movies {
+  display: none;
+  grid-template-columns: 180px 180px 180px 180px;
+  grid-template-rows: auto auto;
+  grid-gap: 15px;
+  justify-content: center;
+}
+
+.card {
+  display: block;
+  height: inherit;
+}
+
+.card-hidden {
+  display: none;
+}
+
+.card-image,
+.__poster {
+  width: 180px;
+  height: 250px;
+}
+
+.__poster {
+  border: 1px solid #333;
+}
+
+.card-image:hover {
+  cursor: pointer;
+}
+
+.movie-title {
+  font-size: 16px;
+  font-family: "Roboto Slab", serif;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.imdb-number {
+  color: #5a5959;
+  font-size: 12px;
+}
+
+#load,
+#back {
+  text-decoration: none;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 2px;
+  background-color: #fff;
+  padding: 3px 7px;
+  display: inline-block;
+}
+
+#load:hover,
+#back:hover {
+  background-color: #006d80;
+  color: #fff;
+  border-color: #000;
+}
+
+.backbutton {
+  display: none;
+  height: 40px;
+  margin: 5px;
+}
+
+.loadmore {
+  margin: 15px 0px;
+  text-align: center;
+  display: none;
+  height: 30px;
+}
+
+.movie-information {
+  display: none;
+  height: 100vh;
+}
+
+.des {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  margin: 15px;
+  font-size: 15px;
+  justify-content: center;
+}
+
+@media (max-width: 742px) {
+  .movies {
+    grid-template-columns: 180px 180px;
+  }
+}
+
+@media (max-width: 375px) {
+  .movies {
+    grid-template-columns: 180px;
+  }
+}
