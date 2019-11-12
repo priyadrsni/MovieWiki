@@ -127,7 +127,7 @@ function loadContent() {
                 console.log(m[i].children[2].textContent);
                 let imdbid = m[i].children[2].textContent;
                 console.log(imdbid);
-                fetch(`http://www.omdbapi.com/?apikey=c520c1&i=${imdbid}`, {
+                fetch(`http://www.omdbapi.com/?apikey=c520c1&i=${imdbid}&plot=full`, {
                   method: "GET"
                 })
                   .then(response => {
