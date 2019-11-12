@@ -41,8 +41,6 @@ function loadContent() {
 
     //Otherwise fetch omdbAPI and show the movie posters and title in the grid form
     else {
-      homePage.style.display = "none";
-
       fetch(`http://www.omdbapi.com/?apikey=c520c1&s=${title}`, {
         method: "GET"
       })
@@ -58,6 +56,7 @@ function loadContent() {
             alert("NO such movies or series is found");
             window.location.reload();
           } else {
+            homePage.style.display = "none";
             let len = movieslist.length;
             for (let i = 0; i < len; i++) {
               //Get the poster and movie title one by one
