@@ -115,10 +115,8 @@ function loadContent() {
                   console.log(m[i]);
                   m[i].className = "card";
                 }
-                if (i === m.length) {
-                  alert("No more rows");
-                }
               }
+              loadBtn.style.display = "none";
             }
 
             // Show the complete plot of the selected poster
