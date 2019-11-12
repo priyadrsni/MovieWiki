@@ -148,7 +148,7 @@ button {
   justify-content: center;
 }
 
-@media (max-width: 742px) {
+@media (max-width: 780px) {
   .movies {
     grid-template-columns: 180px 180px;
   }
