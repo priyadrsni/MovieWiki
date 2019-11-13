@@ -41,7 +41,7 @@ function loadContent() {
 
     //Otherwise fetch omdbAPI and show the movie posters and title in the grid form
     else {
-      fetch(`http://www.omdbapi.com/?apikey=c520c1&s=${title}`, {
+      fetch(`https://www.omdbapi.com/?apikey=c520c1&s=${title}`, {
         method: "GET"
       })
         .then(response => {
@@ -127,7 +127,7 @@ function loadContent() {
                 console.log(m[i].children[2].textContent);
                 let imdbid = m[i].children[2].textContent;
                 console.log(imdbid);
-                fetch(`http://www.omdbapi.com/?apikey=c520c1&i=${imdbid}&plot=full`, {
+                fetch(`https://www.omdbapi.com/?apikey=c520c1&i=${imdbid}&plot=full`, {
                   method: "GET"
                 })
                   .then(response => {
